@@ -20,4 +20,9 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  operation:
+  items:
+    messages:
+      destroyed: 'Item was destroyed'
+  leftsidebar:
+    products: 'Products'

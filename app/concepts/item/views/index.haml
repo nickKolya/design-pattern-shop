@@ -1,0 +1,8 @@
+.row.wrapper.border-bottom.white-bg.page-heading
+  .col-lg-10
+    %h2= I18n.t('leftsidebar.products')
+  .col-lg-2
+    = new_item_link
+.wrapper.wrapper-content.animated.fadeInRight
+  .row
+    = concept('item/cell/show', collection: @model)
