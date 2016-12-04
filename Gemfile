@@ -7,6 +7,11 @@ gem 'rails',             '~> 5.0.0', '>= 5.0.0.1'
 gem 'pg',                               '~> 0.18'
 gem 'puma',                              '~> 3.0'
 
+gem 'trailblazer'
+gem 'trailblazer-rails'
+gem 'cells-haml'
+gem 'cells-rails'
+
 #=== UI =========================================
 gem 'sass-rails',                        '~> 5.0.3'
 gem 'turbolinks',                        '~> 5.0'
