@@ -7,8 +7,4 @@ module ApplicationHelper
   def user_policy
     @user_policy ||= UserPolicy.new(current_user)
   end
-
-  def acting?
-    cookies[:acting_token].present?
-  end
 end

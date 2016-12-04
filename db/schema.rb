@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20161204202608) do
     t.string   "name"
     t.float    "price"
     t.string   "type"
-    t.string   "description"
+    t.text     "description"
     t.datetime "launch_date"
     t.string   "location"
     t.string   "category"
