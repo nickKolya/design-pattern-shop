@@ -8,11 +8,10 @@ gem 'pg',                               '~> 0.18'
 gem 'puma',                              '~> 3.0'
 
 #=== UI =========================================
-gem 'sass-rails',                        '~> 5.0'
+gem 'sass-rails',                        '~> 5.0.3'
 gem 'turbolinks',                        '~> 5.0'
-gem 'slim-rails',                        '~> 3.1'
+gem 'haml',        github: 'haml/haml', ref: '7c7c169'
 gem 'jquery-rails'
-gem 'bootstrap',                '~> 4.0.0.alpha5'
 
 #=== FEATUES ====================================
 gem 'devise'
@@ -22,6 +21,16 @@ gem 'simple_form',                       '~> 3.3'
 gem 'friendly_id',                       '~> 5.1'
 gem 'kaminari',                         '~> 0.17'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+#=== TEMPLATE REQUIREMENTS ====================================
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'compass-rails', github: 'Compass/compass-rails', branch: 'master'
+gem 'datetimepicker-rails', github: 'zpaulovics/datetimepicker-rails', branch: 'master', submodules: true
+gem 'font-awesome-rails'
+gem 'jquery-ui-rails'
+gem 'momentjs-rails', '~> 2.11', '>= 2.11.1'
+gem 'moment_timezone-rails'
+gem 'twitter-bootstrap-rails'
 
 #=== DEV & TEST =================================
 group :development do

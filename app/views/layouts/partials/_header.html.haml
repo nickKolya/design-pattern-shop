@@ -1,0 +1,10 @@
+.row.border-bottom
+  %nav.navbar.navbar-static-top{role: 'navigation', style: 'margin-bottom: 0'}
+    .navbar-header
+      = link_to '#', class: 'navbar-minimalize minimalize-styl-2 btn btn-warning' do
+        %i.fa.fa-bars
+    %ul.nav.navbar-top-links.navbar-right
+      %li
+        = link_to '#', method: :delete do
+          %i.fa.fa-sign-out
+          = 'Logout'

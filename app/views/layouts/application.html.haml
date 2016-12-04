@@ -1,0 +1,23 @@
+!!!
+%html
+  %head
+    %title= 'Shop'
+    %link{ rel: 'shortcut icon', type: 'image/png', href: image_path('logo.png') }
+    = stylesheet_link_tag ApplicationView.action_assets_path(params, :css)
+    = stylesheet_link_tag ApplicationView.parental_controller_for(params[:controller]) if ::Rails.application.assets.find_asset("#{params[:controller]}.css")
+    = stylesheet_link_tag 'application', media: 'all'
+    = javascript_include_tag 'application'
+    = javascript_include_tag ApplicationView.action_assets_path(params, :js)
+    = javascript_include_tag ApplicationView.parental_controller_for(params[:controller]) if ::Rails.application.assets.find_asset("#{params[:controller]}.js")
+    = favicon_link_tag 'favicon.ico'
+    = csrf_meta_tags
+    %meta{ content: 'width=device-width', name: 'viewport' }
+  %body
+    #wrapper
+      = render 'layouts/partials/leftsidebar'
+      #page-wrapper.gray-bg
+        = render 'layouts/partials/alerts'
+        = render 'layouts/partials/header'
+        = yield
+
+    = yield :scripts

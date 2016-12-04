@@ -1,0 +1,172 @@
+.accented-block {
+  border-left: 2px solid #1ab394;
+  margin-top: 15px;
+  padding-left: 25px;
+}
+
+.admin-panel-header {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.toast-top-center {
+  top: 12px;
+}
+
+.icheckbox_square-green {
+  background: url(asset-path('green.png')) no-repeat;
+  transform: scale(0.65);
+}
+
+.iradio_square-green {
+  background: url(asset-path('green.png')) no-repeat;
+  background-position: -120px 0;
+  transform: scale(0.85);
+}
+
+table.table tr {
+  word-break: break-word;
+}
+
+.table-overflow {
+  .dataTables_wrapper > .row:nth-of-type(2) {
+    overflow: auto;
+    width: calc(100% + 24px);
+  }
+}
+
+.table > thead:first-child > tr:first-child > th {
+  word-break: normal;
+}
+
+.logo-main img {
+  max-width: 100%;
+  height: auto !important;
+}
+
+.payment-alert {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.flex-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.non-active {
+  pointer-events: none;
+}
+
+a.non-active {
+  color: silver;
+}
+
+.nonvisible {
+  display: none;
+}
+
+.modal-content .fileinput {
+  display: flex;
+}
+
+.modal-content
+.file-holder {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.modal-content
+.fileinput-filename {
+  text-overflow: ellipsis;
+  width: 90%;
+}
+
+.modal-content
+.input-group-addon {
+  width: auto;
+  flex-shrink: 0;
+}
+
+.chosen-container
+.chosen-single {
+  cursor: pointer;
+}
+
+/* input[type=number] styles */
+input[type=number] {
+  padding: 0 3px 0 8px;
+}
+input[type=number]::-webkit-inner-spin-button {
+  appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance: none;
+  cursor:pointer;
+  display:block;
+  color: #333;
+  width: 5px;
+  text-align:center;
+  position:relative;
+}
+
+input[type=number]:hover::-webkit-inner-spin-button {
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKBAMAAAB/HNKOAAAALVBMVEUAAABoa21oa21oa21oa21oa21oa21oa21oa21oa21oa21oa21oa21oa21oa22nQgHLAAAADnRSTlMABQYVJyg2WYmLqOLz+y7StvwAAAAsSURBVAhbY2Bga2AAAtvnQIJx3zsHBgaud+8OMqAAiAjTvncBMJUMbBMYGAB5/AyehYjA4AAAAABJRU5ErkJggg==') no-repeat;
+  background-size: 10px 10px;
+  padding: 6px 0 6px 6px;
+  position: relative;
+}
+/* end */
+
+.number-input-group {
+  .chosen-drop {
+    width: 330px;
+  }
+  input {
+    display: inline-block;
+    width: 79%;
+    padding-top: 2px;
+    margin-right: -7px;
+  }
+}
+
+.select2-container--default
+.select2-results__option--highlighted[aria-selected] {
+  background-color: #1ab394;
+}
+
+.country-code {
+  width: 330px !important;
+}
+
+.select2-dropdown {
+  border-radius: 0px;
+  border-color: #E5E6E7;
+}
+
+.select2-container--default
+.select2-search--dropdown
+.select2-search__field {
+  border-color: #E5E6E7;
+
+}
+
+.select2-search__field:focus {
+  outline: none !important;
+}
+
+.select2-search__field {
+  background: url(/assets/chosen-sprite-e670fdcaf8cd467a9a1a67e9a5c1f73288089f59dc08031b118dc26fbd233c80.png) no-repeat 100% -20px, #fff;
+  border: 1px solid #e5e6e7;
+  border-radius: 4px;
+  margin: 1px 0;
+  padding: 4px 20px 4px 4px;
+  width: 100%;
+}
+
+.select2-selection.select2-selection--single {
+  border-radius: 0px;
+  border-color: #E5E6E7;
+  height: 34px;
+  outline: none;
+}
