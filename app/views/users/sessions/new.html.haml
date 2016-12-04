@@ -1,0 +1,14 @@
+%p= I18n.t('devise_views.signin.header')
+%br
+= form_for(resource, as: resource_name, url: session_path(resource_name), class: 'm-t') do |f|
+  .text-danger
+    = devise_error_messages!
+  .form-group
+    = f.email_field :email, placeholder: 'example@gmail.com', required: true, class: 'form-control'
+  .form-group
+    = f.password_field :password, placeholder: '******', required: true, class: 'form-control'
+  .form-group
+    = f.check_box(:remember_me, {checked: true, class: 'i-checks'}, 1, 0)
+    = f.label :remember_me, class: 'control-label'
+  = f.submit I18n.t('devise_views.shared_links.signin'), class: 'btn btn-primary block full-width m-b'
+= render 'users/shared/links'

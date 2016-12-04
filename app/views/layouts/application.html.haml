@@ -1,7 +1,7 @@
 !!!
 %html
   %head
-    %title= 'Shop'
+    %title= I18n.t('company_name')
     %link{ rel: 'shortcut icon', type: 'image/png', href: image_path('logo.png') }
     = stylesheet_link_tag ApplicationView.action_assets_path(params, :css)
     = stylesheet_link_tag ApplicationView.parental_controller_for(params[:controller]) if ::Rails.application.assets.find_asset("#{params[:controller]}.css")
@@ -9,7 +9,7 @@
     = javascript_include_tag 'application'
     = javascript_include_tag ApplicationView.action_assets_path(params, :js)
     = javascript_include_tag ApplicationView.parental_controller_for(params[:controller]) if ::Rails.application.assets.find_asset("#{params[:controller]}.js")
-    = favicon_link_tag 'favicon.ico'
+    = favicon_link_tag 'logo.png'
     = csrf_meta_tags
     %meta{ content: 'width=device-width', name: 'viewport' }
   %body

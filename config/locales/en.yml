@@ -26,3 +26,6 @@ en:
       destroyed: 'Item was destroyed'
   leftsidebar:
     products: 'Products'
+  hello: "Hello world"
+  welcome_headline: Welcome to Fluor
+  company_name: Fluor

@@ -60,3 +60,38 @@ en:
       not_saved:
         one: "1 error prohibited this %{resource} from being saved:"
         other: "%{count} errors prohibited this %{resource} from being saved:"
+  devise_views:
+    update_profile:
+      update_account: "Update Account"
+      leave_blank: "(leave blank if you don't want to change it)"
+      need_password: "(we need your current password to confirm your changes)"
+      waiting_confirmation: "(сurrently waiting confirmation for: %{email})"
+      upload_file: "Upload File"
+      cancel: "Cancel"
+      update: "Update"
+    shared_links:
+      signin: "Sign in"
+      signup: "Sign up"
+      continue: 'Continue'
+      update: 'Update'
+      forgot_password: "Forgot your password?"
+      confirmation: "Didn't receive confirmation instructions?"
+      unlock_instructions: "Didn't receive unlock instructions?"
+      omnisignin: "Sign in with %{provider}"
+      not_remember_email: "Can't remember an email?"
+    signin:
+      header: "Sign in and start buy awesome products"
+      remember_me: "Remember Me"
+    signup:
+      header: "Sign Up"
+      country_promt: "Please, select country"
+      agree_with: 'Agree with'
+      terms: 'Terms and Conditions'
+    forgot_password:
+      change_password: "Change Password"
+      minimum_characters: "(%{number} characters minimum)"
+      header: "Forgot your password?"
+      send_instructions: "Send me reset password instructions"
+    confirmations:
+      header: "Resend confirmation instructions"
+      resend_button: "Resend instructions"

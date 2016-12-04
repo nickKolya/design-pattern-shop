@@ -1,0 +1,18 @@
+!!!
+%html
+  %head
+    %title= I18n.t('company_name')
+    = stylesheet_link_tag 'devise', media: 'all'
+    = stylesheet_link_tag 'application', media: 'all'
+    = javascript_include_tag 'application'
+    = javascript_include_tag 'devise'
+    = favicon_link_tag 'logo.png'
+    = csrf_meta_tags
+    %meta{ content: 'width=device-width', name: 'viewport' }
+  %body.gray-bg.devise-layout
+    = render partial: 'layouts/partials/alerts'
+    .text-center.loginscreen.animated.fadeInDown
+      %h1.logo-name.logo-main= image_tag('logo.png')
+    .middle-box.text-center.loginscreen.animated.fadeInDown
+      %h3= I18n.t('welcome_headline')
+      = yield
