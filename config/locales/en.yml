@@ -29,3 +29,5 @@ en:
   hello: "Hello world"
   welcome_headline: Welcome to Fluor
   company_name: Fluor
+  header:
+    logout: Logout
