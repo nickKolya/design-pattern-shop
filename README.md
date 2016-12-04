@@ -21,4 +21,5 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+* Link on architecture schema 
+https://www.gliffy.com/go/share/sh4b223c6jqndk4rxpyk
