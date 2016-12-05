@@ -56,6 +56,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'dotenv-rails'
   gem 'awesome_print'
+  gem 'letter_opener'
 end
 
 group :test do

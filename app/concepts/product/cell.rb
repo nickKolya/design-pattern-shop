@@ -1,5 +1,5 @@
 class Product
-  class Cell < Cell::Concept
+  class Cell < ::Cell::Concept
     include ::Cell::Haml
 
     def show

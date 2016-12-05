@@ -39,6 +39,13 @@ window.loadTouchSpin = function (nameClass, ChangeCallback) {
   }).on('change', ChangeCallback);
 };
 
+function navHeaderClick() {
+  $('.dropdown.profile-element').click(function() {
+    $(this).toggleClass('open');
+  })
+}
+
 $(function () {
   globalInit();
+  navHeaderClick();
 });
