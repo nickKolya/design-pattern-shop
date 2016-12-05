@@ -5,4 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   ROLES = [BUSINESS = 'business'.freeze, ADMIN = 'admin'.freeze]
+
+  has_many :orders
 end
