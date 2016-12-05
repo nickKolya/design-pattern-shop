@@ -1,0 +1,8 @@
+%p= I18n.t('devise_views.forgot_password.header')
+%br
+= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
+  .text-danger
+    = devise_error_messages!
+  .form-group
+    = f.email_field :email, placeholder: 'example@gmail.com', required: true, class: 'form-control'
+  = f.submit I18n.t('devise_views.forgot_password.send_instructions'), class: 'btn btn-primary block full-width m-b'

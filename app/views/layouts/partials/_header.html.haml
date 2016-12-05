@@ -5,6 +5,6 @@
         %i.fa.fa-bars
     %ul.nav.navbar-top-links.navbar-right
       %li
-        = link_to '#', method: :delete do
+        = link_to destroy_user_session_path, method: :delete do
           %i.fa.fa-sign-out
-          = 'Logout'
+          = I18n.t('header.logout')

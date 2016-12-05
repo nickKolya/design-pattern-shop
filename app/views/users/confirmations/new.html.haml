@@ -1,0 +1,10 @@
+%p= I18n.t('devise_views.confirmations.header')
+%br
+= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f|
+  .text-danger
+    = devise_error_messages!
+  .form-group
+    = f.email_field :email, placeholder: :email, required: true, value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email), class: 'form-control'
+  = f.submit I18n.t('devise_views.confirmations.resend_button'), class: 'btn btn-primary block full-width m-b'
+= link_to find_user_phone_path do
+  %small= I18n.t('devise_views.shared_links.not_remember_email')
