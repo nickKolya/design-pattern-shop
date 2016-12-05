@@ -1,0 +1,8 @@
+en:
+  confirmation:
+    hello: Welcome %{email}!
+    message: Please confirm your account email through the link below
+    link: Confirm my account
+  emails:
+    copyrigth: Fluor
+    company_name: Fluor
