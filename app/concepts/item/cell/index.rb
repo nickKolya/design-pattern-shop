@@ -15,7 +15,7 @@ class Item
       end
 
       def user_policy
-        @user_policy ||= UserPolicy.new(@params[:current_user])
+        @user_policy ||= UserPolicy.new(params[:current_user])
       end
     end
   end
