@@ -9,5 +9,4 @@ class Item < ApplicationRecord
 
   validates_attachment_content_type :image, content_type: /\Aimage/
   validates_attachment_size :image, less_than: 5.megabytes
-  belongs_to :order
 end
