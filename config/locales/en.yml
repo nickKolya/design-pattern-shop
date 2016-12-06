@@ -20,12 +20,36 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  global:
+    actions: Actions
+    save: Saving
+  action:
+    destroy: Delete
+  buttons:
+    create: Create
+    update: Update
   operation:
-  items:
-    messages:
-      destroyed: 'Item was destroyed'
+    items:
+      messages:
+        destroyed: 'Item was destroyed'
+    orders:
+      messages:
+        destroyed: 'Order was destroyed'
+  views:
+    order:
+      delete: Delete
+      listing_order: My Orders
+      new_order: 'New Order'
+      name: Name
+      created_at: Created At
+      description: Description
+      items: Products and Services
+      choose_products_or_services: Choose Products or Services
+    product:
+      new_product: 'New Product'
   leftsidebar:
     products: 'Products'
+    orders: 'Orders'
     actions: Actions
     logout: Logout
     login: Login
@@ -33,3 +57,14 @@ en:
   hello: "Hello world"
   welcome_headline: Welcome to Fluor
   company_name: Fluor
+  successfull_messages:
+    created: "%{model} was successfully created."
+    updated: "%{model} was successfully updated."
+    deleted: "%{model} was successfully deleted."
+    canceled: '%{model} was successfully canceled'
+  error_messages:
+    record_not_found: Record not found
+    action_not_found: The action could not be found
+  activerecord:
+    models:
+      order: Order

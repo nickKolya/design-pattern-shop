@@ -6,3 +6,4 @@
 //= require modal_window
 //= require inspinia/inspinia
 //= require twitter/bootstrap
+//= require inspinia/chosen/chosen.jquery.js

@@ -3,6 +3,10 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
+  rescue_from ActiveRecord::RecordNotFound do
+    redirect_to root_url, alert: t('error_messages.record_not_found')
+  end
+
   private
 
   def render_view(controller, action, options = {})
@@ -22,5 +26,9 @@ class ApplicationController < ActionController::Base
 
   def process_params!(params)
     params[:current_user] = current_user
+  end
+
+  def should_authenticate
+    redirect_to root_url, alert: t('devise_views.signin.header') unless current_user.present?
   end
 end

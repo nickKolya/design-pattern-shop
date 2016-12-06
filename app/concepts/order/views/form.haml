@@ -1,0 +1,34 @@
+.row.wrapper.border-bottom.white-bg.page-heading
+  .col-lg-10
+    %h2
+      = link_to orders_path, class: 'm-n' do
+        = I18n.t('views.order.listing_order')
+      %i.fa.fa-angle-right
+      = action_name
+
+.wrapper.wrapper-content.animated.fadeInRight
+  .row
+    .hpanel.p-m
+      .panel-body
+        = form_for contract, url: form_path, html: { class: 'form-horizontal order-form', id: 'form-content' } do |f|
+          .form-group
+            %label.col-sm-3.control-label
+              = I18n.t('views.order.name')
+            .col-sm-6
+              = f.text_field :name, class: 'form-control', required: true
+          .form-group
+            %label.col-sm-3.control-label
+              = I18n.t('views.order.description')
+            .col-sm-6
+              = f.text_area :description, class: 'form-control'
+          .form-group
+            %label.col-sm-3.control-label
+              = I18n.t('views.order.items')
+            .col-sm-6
+              .input-group.width-100
+                = f.select :item_ids, items_select, {}, multiple: true, 'data-placeholder': I18n.t('views.order.choose_products_or_services'), class: 'chosen-select width-100'
+          .form-group
+            .col-sm-6.col-sm-offset-3
+              = f.button action_name, class: 'btn btn-primary btn-create-order', type: 'submit', data: { disable_with:  "<i class='fa fa-spinner fa-spin'></i> #{I18n.t('global.save')}".html_safe }
+        .clearfix
+

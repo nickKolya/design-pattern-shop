@@ -1,0 +1,19 @@
+.row.wrapper.border-bottom.white-bg.page-heading
+  .col-lg-10
+    %h2= I18n.t('views.order.listing_order')
+  .col-lg-2
+    %h2= link_to I18n.t('views.order.new_order'), new_order_path, class: 'btn btn-primary'
+.wrapper.wrapper-content.animated.fadeInRight
+  .row
+    - if @collection.present?
+      .hpanel.p-m
+        .panel-body
+          .table-responsive
+            %table.table.td-middle
+              %thead
+                %tr
+                  %th=t('views.order.name')
+                  %th=t('views.order.created_at')
+                  %th.width-20=t('global.actions')
+              %tbody
+                = concept('order/cell/list', collection: @collection)
