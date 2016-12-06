@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161205224324) do
+ActiveRecord::Schema.define(version: 20161206191110) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,6 +30,8 @@ ActiveRecord::Schema.define(version: 20161205224324) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.integer  "order_id"
+    t.index ["order_id"], name: "index_items_on_order_id", using: :btree
   end
 
   create_table "orders", force: :cascade do |t|
