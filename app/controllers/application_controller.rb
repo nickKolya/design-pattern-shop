@@ -9,6 +9,17 @@ class ApplicationController < ActionController::Base
 
   private
 
+  def only_admin!
+    render_404 unless UserPolicy.new(params[:current_user]).admin?
+  end
+
+  def render_404
+    respond_to do |format|
+      format.html { render file: "#{Rails.root}/public/404", layout: false, status: :not_found }
+      format.json { render json: { status: 404 } }
+    end
+  end
+
   def render_view(controller, action, options = {})
     flash.now.alert = options[:alert] if options[:alert]
     flash.now.notice = options[:notice] if options[:notice]

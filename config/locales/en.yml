@@ -33,6 +33,9 @@ en:
   buttons:
     create: Create
     update: Update
+  hello: "Hello world"
+  welcome_headline: Welcome to Fluor
+  company_name: Fluor
   operation:
     items:
       messages:
@@ -78,3 +81,20 @@ en:
   activerecord:
     models:
       order: Order
+  header:
+    logout: Logout
+  views:
+    product:
+      buttons:
+        create: 'save product'
+      form:
+        name: 'Name'
+        title: 'New Product form'
+        description: 'Description'
+        price: 'Price'
+        category: 'Category'
+      index: 'index'
+      breadcrumb:
+        new: 'New product'
+      new_service: 'Create Service'
+      new_product: 'Create Product'

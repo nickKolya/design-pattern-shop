@@ -5,6 +5,8 @@ class Item
 
       Item.attribute_names.each { |col| property col.to_sym }
 
+      property :image
+
       validates :name, :description, :category, presence: true
     end
   end

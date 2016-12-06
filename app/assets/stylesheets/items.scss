@@ -1,0 +1,13 @@
+.flex-vertical-align {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-uploads-container {
+  width: 256px;
+  height: 256px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}

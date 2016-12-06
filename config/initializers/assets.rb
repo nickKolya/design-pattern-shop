@@ -11,3 +11,7 @@ Rails.application.config.assets.version = '1.0'
 # Rails.application.config.assets.precompile += %w( search.js )
 Rails.application.config.assets.precompile += %w( devise.* )
 Rails.application.config.assets.precompile += %w( orders/index.js orders/new.js orders/create.js orders/update.js orders/edit.js orders/show.js orders/index.css )
+Rails.application.config.assets.precompile += %w( items.css )
+Rails.application.config.assets.precompile += %w( items.js )
+Rails.application.config.assets.precompile += %w( products.css )
+Rails.application.config.assets.precompile += %w( products.js )

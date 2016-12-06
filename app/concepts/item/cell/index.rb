@@ -9,9 +9,14 @@ class Item
         render :index
       end
 
-      def new_item_link
-        link_to I18n.t('views.product.new_product'), new_item_path, class: 'btn btn-primary' if
-          user_policy.admin?
+      def new_product_link
+        link_to I18n.t('views.product.new_product'), new_product_path,
+                class: 'btn btn-primary' if user_policy.admin?
+      end
+
+      def new_service_link
+        link_to I18n.t('views.product.new_service'), new_service_path,
+                class: 'btn btn-primary' if user_policy.admin?
       end
 
       def user_policy

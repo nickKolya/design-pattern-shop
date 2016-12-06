@@ -1,8 +1,10 @@
-.row.wrapper.border-bottom.white-bg.page-heading
-  .col-lg-10
+.row.wrapper.border-bottom.white-bg.page-heading.flex-wrapper
+  .col-xs-8
     %h2= I18n.t('leftsidebar.products')
-  .col-lg-2
-    = new_item_link
+  .col-xs-2.flex-vertical-align
+    = new_product_link
+  .col-xs-2.flex-vertical-align
+    = new_service_link
 .wrapper.wrapper-content.animated.fadeInRight
   .row
     = concept('item/cell/show', collection: @model)

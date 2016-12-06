@@ -1,0 +1,29 @@
+.form-group
+  %label.col-sm-2.control-label=I18n.t('views.product.form.name')
+  .col-sm-10
+    = form.text_field :name, class: 'form-control'
+.hr-line-dashed
+.form-group
+  %label.col-sm-2.control-label=I18n.t('views.product.form.price')
+  .col-sm-10
+    = form.text_field :price, class: 'form-control'
+.hr-line-dashed
+.form-group
+  %label.col-sm-2.control-label=I18n.t('views.product.form.category')
+  .col-sm-10
+    = form.select :category_id, map_sub_categories, {}, class: 'form-control'
+.hr-line-dashed
+.form-group
+  %label.col-sm-2.control-label=I18n.t('views.product.form.description')
+  .col-sm-10
+    = form.text_field :description, class: 'form-control'
+.hr-line-dashed
+.form-group.flex-wrapper
+  = form.label :image, class: 'col-sm-2 control-label flex-vertical-align'
+  .col-sm-4
+    .m-b.m-t-md.img-uploads-container{ style: "background-image: url(#{asset_path(@model.image.url(:medium))})"}
+  .col-sm-2.flex-vertical-align
+    .input-group
+      %label.btn.btn-default
+        = I18n.t('devise_views.update_profile.upload_file')
+        = form.file_field :image, class: 'hide img-uploads-selector-js'
