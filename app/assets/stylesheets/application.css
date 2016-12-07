@@ -1,12 +1,11 @@
 /*
  *= require inspinia/animate/animate
+ *= require inspinia/toastr/toastr.min
  *= require inspinia/chosen/chosen.css
  *= require_self
- *= require inspinia/chosen/chosen.css
 */
 
 @import 'bootstrap_and_overrides';
 @import 'font-awesome';
 @import 'style';
 @import 'main';
-

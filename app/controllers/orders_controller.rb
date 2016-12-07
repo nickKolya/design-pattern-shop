@@ -38,6 +38,27 @@ class OrdersController < ApplicationController
     redirect_to orders_path, alert: @operation.errors.full_messages
   end
 
+  def cancel
+    run Order::Cancel do
+      return redirect_to orders_path, notice: t('successfull_messages.updated', model: t('activerecord.models.order'))
+    end
+    redirect_to orders_path, alert: @operation.errors.full_messages
+  end
+
+  def reopen
+    run Order::Reopen do
+      return redirect_to orders_path, notice: t('successfull_messages.updated', model: t('activerecord.models.order'))
+    end
+    redirect_to orders_path, alert: @operation.errors.full_messages
+  end
+
+  def invoice
+    run Order::Invoice do
+      return redirect_to orders_path, notice: t('successfull_messages.updated', model: t('activerecord.models.order'))
+    end
+    redirect_to orders_path, alert: @operation.errors.full_messages
+  end
+
   private
 
   def render_form

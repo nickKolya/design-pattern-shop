@@ -25,6 +25,9 @@ en:
     save: Saving
   action:
     destroy: Delete
+    cancel: Cancel
+    invoice: Invoice
+    reopen: Reopen
   buttons:
     create: Create
     update: Update
@@ -37,6 +40,7 @@ en:
         destroyed: 'Order was destroyed'
   views:
     order:
+      state: State
       delete: Delete
       listing_order: My Orders
       new_order: 'New Order'

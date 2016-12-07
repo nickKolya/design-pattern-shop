@@ -6,7 +6,7 @@ class Order
 
     include Model
     model Order, :create
-    contract Contract::Update
+    contract Contract::Create
 
     def process(params)
       validate(params[:order], &:save)
