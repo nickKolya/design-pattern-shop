@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :orders, only: [] do
     collection do
       get :show_to_pay
-      post :pay
     end
   end
+  resources :payments, only: [:create]
 end

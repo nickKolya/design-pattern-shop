@@ -3,6 +3,8 @@ module PaymentConcerns
     extend ActiveSupport::Concern
 
     included do
+      include AASM
+
       enum status: %i(pending processing confirmed)
       aasm :status, column: :status, enum: true do
         state :pending, initial: true
@@ -17,3 +19,5 @@ module PaymentConcerns
         end
       end
     end
+  end
+end

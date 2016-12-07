@@ -33,6 +33,12 @@ gem 'paperclip',                         '~> 5.0'
 #=== PAYMENTS ====================================
 gem 'stripe'
 
+#=== ASYNC ===================
+gem 'sidekiq'
+
+#=== STATE ===================
+gem 'aasm'
+
 #=== TEMPLATE REQUIREMENTS ====================================
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'compass-rails', github: 'Compass/compass-rails', branch: 'master'
