@@ -10,7 +10,7 @@ class Order
       private
 
       def can_reopen?
-        model.canceled? || !model.user.orders.newmade.take.present?
+        model.canceled? && !model.user.orders.newmade.take.present?
       end
     end
   end
