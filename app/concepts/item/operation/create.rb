@@ -7,7 +7,7 @@ class Item
 
     contract Contract::ItemForm
 
-    def process_user_logic(params)
+    def process_user_logic(_params)
       validate(params_form, &:save)
     end
 

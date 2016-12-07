@@ -6,7 +6,7 @@ class ServicesController < ApplicationController
     render_view :service, :new
   end
 
-   def create
+  def create
     run Item::Create do
       return redirect_to items_path, @operation.alerts
     end
