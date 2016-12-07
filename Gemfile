@@ -39,12 +39,15 @@ gem 'momentjs-rails', '~> 2.11', '>= 2.11.1'
 gem 'moment_timezone-rails'
 gem 'twitter-bootstrap-rails'
 
+gem 'pdfkit'
+gem 'wkhtmltopdf-binary'
+
 #=== DEV & TEST =================================
 group :development do
   gem 'web-console'
   gem 'listen',                          '~> 3.0'
-  gem 'spring'
-  gem 'spring-watcher-listen',           '~> 2.0'
+  # gem 'spring'
+  # gem 'spring-watcher-listen',           '~> 2.0'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'meta_request'
