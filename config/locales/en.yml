@@ -71,6 +71,10 @@ en:
   error_messages:
     record_not_found: Record not found
     action_not_found: The action could not be found
+    cant_cancel: 'You can`n cancel order'
+    cant_create: 'You can`n create new order'
+    cant_invoice: 'You can`n invoice order'
+    cant_reopen: 'You can`n reopen order'
   activerecord:
     models:
       order: Order

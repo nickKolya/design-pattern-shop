@@ -4,7 +4,7 @@ class Order
       validate :current_state
 
       def current_state
-        errors.add(:order, 'You can`n reopen order') unless can_reopen?
+        errors.add(:order, I18n.t('error_messages.cant_reopen')) unless can_reopen?
       end
 
       private
