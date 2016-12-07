@@ -1,11 +1,14 @@
 class Item
-  module Contract
-    module ItemForm
-      include Reform::Form::Module
+  class Contract
+    class ItemForm < Reform::Form
+      PRICE_REGEX = /\A\d+(,\d{1,2})?\z/
 
       Item.attribute_names.each { |col| property col.to_sym }
 
-      validates :name, :description, :category, presence: true
+      property :image
+
+      validates :name, :description, :category_id, presence: true
+      validates :price, format: PRICE_REGEX
     end
   end
 end

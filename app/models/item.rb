@@ -1,9 +1,9 @@
 class Item < ApplicationRecord
-  TYPES = [PRODUCT = 'product'.freeze, SERVICE = 'service'.freeze]
+  TYPES = [PRODUCT = 'Product'.freeze, SERVICE = 'Service'.freeze]
 
   has_attached_file :image,
                     styles: { medium: '512x512', small: '128x128' },
-                    default_url: 'images/:style/item.png'
+                    default_url: 'item.png'
 
   # Validations
 
@@ -12,4 +12,7 @@ class Item < ApplicationRecord
 
   has_many :orders_items, dependent: :destroy
   has_many :orders, through: :orders_items
+  belongs_to :category, class_name: 'SubCategory'
+
+  delegate :name, to: :category, prefix: true, allow_nil: true
 end

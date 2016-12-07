@@ -3,19 +3,15 @@ class Item
     class Show < ::Cell::Concept
 
       def show
-        render item_show
+        items_cell_show[model.type]&.new(model)&.call(:show)
       end
 
       private
 
-      def item_show
-        items_cell_show[model.type]&.new(model)&.call(:show)
-      end
-
       def items_cell_show
         {
-          Product => Product::Cell::Show,
-          Service => Service::Cell::Show
+          ::Item::PRODUCT => Product::Cell::Show,
+          ::Item::SERVICE => Service::Cell::Show
         }
       end
     end

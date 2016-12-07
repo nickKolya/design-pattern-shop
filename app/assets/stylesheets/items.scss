@@ -1,0 +1,28 @@
+.flex-vertical-align {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-uploads-container {
+  width: 256px;
+  height: 256px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.product-imitation.image-wrapper {
+  padding: 10px 0;
+}
+
+.item-image {
+  width: 95%;
+}
+.textarea.form-control {
+  resize: vertical;
+}
+
+.text-icon .fa {
+  margin-right: 10px;
+}

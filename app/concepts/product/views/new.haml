@@ -1,0 +1,19 @@
+.row.wrapper.border-bottom.white-bg.page-heading
+  .col-xs-8
+    %h2= I18n.t('views.product.breadcrumb.new')
+    %ol.breadcrumb
+      %li= link_to I18n.t('views.product.index'), items_path
+      %li
+        %strong= I18n.t('views.product.breadcrumb.new')
+.wrapper.wrapper-content.animated.fadeInRight
+  .row
+    .col-lg-12
+      .ibox.float-e-margins
+        .ibox-title
+          %h3= I18n.t('views.product.form.title')
+        .ibox-content
+          = form_for @form, url: products_path(type: Product), method: :post, html: { class: 'form-horizontal' } do |f|
+            = concept('item/cell/form', @model, form: f)
+            .form-group
+              .col-sm-3.col-sm-offset-2
+                = f.submit I18n.t('views.product.buttons.create'), class: 'btn btn-primary btn-block submit-form-js'

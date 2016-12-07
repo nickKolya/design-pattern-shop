@@ -6,6 +6,6 @@ class UserPolicy
   end
 
   def admin?
-    user.role == User::ADMIN
+    user && user.role == User::ADMIN
   end
 end

@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :items
+
   resources :orders, except: [:show] do
     member do
       get 'cancel', to: 'orders#cancel', as: 'cancel'
@@ -12,4 +13,8 @@ Rails.application.routes.draw do
       get 'copy', to: 'orders#copy', as: 'copy'
     end
   end
+
+  resources :products
+
+  resources :services
 end

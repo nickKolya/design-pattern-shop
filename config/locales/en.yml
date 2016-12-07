@@ -33,6 +33,9 @@ en:
   buttons:
     create: Create
     update: Update
+  hello: "Hello world"
+  welcome_headline: Welcome to Fluor
+  company_name: Fluor
   operation:
     items:
       messages:
@@ -53,6 +56,7 @@ en:
       choose_products_or_services: Choose Products or Services
     product:
       new_product: 'New Product'
+        created: 'Item was created'
   leftsidebar:
     products: 'Products'
     orders: 'Orders'
@@ -78,3 +82,32 @@ en:
   activerecord:
     models:
       order: Order
+  header:
+    logout: Logout
+  views:
+    service:
+      index: 'Items'
+      breadcrumb:
+        new: 'New service'
+      buttons:
+        create: 'Save service'
+      form:
+        title: 'New Service form'
+    product:
+      buttons:
+        add_to_cart: '+ add to cart'
+        create: 'Save product'
+      form:
+        location: 'Location'
+        launch_date: 'Launch Date'
+        optional: 'optional'
+        name: 'Name'
+        title: 'New Product form'
+        description: 'Description'
+        price: 'Price'
+        category: 'Category'
+      index: 'index'
+      breadcrumb:
+        new: 'New product'
+      new_service: 'Create Service'
+      new_product: 'Create Product'

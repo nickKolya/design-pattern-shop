@@ -1,0 +1,15 @@
+.col-md-3
+  .ibox
+    .ibox-content.product-box
+      .product-imitation.image-wrapper
+        = image_tag image.url(:medium), class: 'item-image'
+      .product-desc
+        %span.product-price= "#{price} $"
+        %small.text-muted= category_name
+        = location_field
+        = launch_date_field
+        %span.product-name= name
+        .small.m-t-xs= description
+        .m-t.text-righ
+          = link_to I18n.t('views.product.buttons.add_to_cart'), '#',
+                    class: 'btn btn-xs btn-outline btn-primary'

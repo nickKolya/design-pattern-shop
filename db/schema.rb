@@ -16,6 +16,12 @@ ActiveRecord::Schema.define(version: 20161206222818) do
   enable_extension "plpgsql"
   enable_extension "uuid-ossp"
 
+  create_table "categories", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "items", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
     t.string   "name"
     t.float    "price"
@@ -23,13 +29,13 @@ ActiveRecord::Schema.define(version: 20161206222818) do
     t.text     "description"
     t.datetime "launch_date"
     t.string   "location"
-    t.string   "category"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.integer  "category_id"
   end
 
   create_table "orders", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
@@ -49,6 +55,14 @@ ActiveRecord::Schema.define(version: 20161206222818) do
     t.datetime "updated_at", null: false
     t.index ["item_id"], name: "index_orders_items_on_item_id", using: :btree
     t.index ["order_id"], name: "index_orders_items_on_order_id", using: :btree
+  end
+
+  create_table "sub_categories", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
+    t.integer  "category_id"
+    t.string   "name"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["category_id"], name: "index_sub_categories_on_category_id", using: :btree
   end
 
   create_table "users", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
