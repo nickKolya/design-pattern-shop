@@ -6,16 +6,6 @@ class ItemsController < ApplicationController
     render_view :index
   end
 
-  def new
-    form Item::Create
-    render_view :new
-  end
-
-  def edit
-    form Item::Update
-    render_view :edit
-  end
-
   def destroy
     form Item::Delete
     render json: @operation.alers, status: @operation.status

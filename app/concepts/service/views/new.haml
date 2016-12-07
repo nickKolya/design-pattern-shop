@@ -1,0 +1,42 @@
+.row.wrapper.border-bottom.white-bg.page-heading
+  .col-xs-8
+    %h2= I18n.t('views.service.breadcrumb.new')
+    %ol.breadcrumb
+      %li= link_to I18n.t('views.service.index'), items_path
+      %li
+        %strong= I18n.t('views.service.breadcrumb.new')
+.wrapper.wrapper-content.animated.fadeInRight
+  .row
+    .col-lg-12
+      .ibox.float-e-margins
+        .ibox-title
+          %h3= I18n.t('views.service.form.title')
+        .ibox-content
+          = form_for @form, url: services_path(type: Service), method: :post, html: { class: 'form-horizontal' } do |f|
+            = concept('item/cell/form', @model, form: f)
+            .hr-line-dashed
+            .form-group
+              %label.col-sm-2.control-label
+                = I18n.t('views.product.form.launch_date')
+                %br
+                %small.text-navy= I18n.t('views.product.form.optional')
+              .col-sm-10
+                .input-group.date
+                  .input-group-addon
+                    %span.glyphicon.glyphicon-calendar
+                  = f.text_field :launch_date, class: 'form-control datePicker'
+            .hr-line-dashed
+            .form-group
+              %label.col-sm-2.control-label
+                = I18n.t('views.product.form.location')
+                %br
+                %small.text-navy= I18n.t('views.product.form.optional')
+              .col-sm-10
+                .input-group.m-b
+                  %span.input-group-addon
+                    %i.fa.fa-map-marker
+                  = f.text_field :location, class: 'form-control'
+            .hr-line-dashed
+            .form-group
+              .col-sm-3.col-sm-offset-2
+                = f.submit I18n.t('views.service.buttons.create'), class: 'btn btn-primary btn-block submit-form-js'

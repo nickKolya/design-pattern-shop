@@ -10,7 +10,8 @@ class ApplicationController < ActionController::Base
   private
 
   def only_admin!
-    render_404 unless UserPolicy.new(params[:current_user]).admin?
+    return unless current_user
+    render_404 unless UserPolicy.new(current_user).admin?
   end
 
   def render_404

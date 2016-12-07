@@ -56,6 +56,7 @@ en:
       choose_products_or_services: Choose Products or Services
     product:
       new_product: 'New Product'
+        created: 'Item was created'
   leftsidebar:
     products: 'Products'
     orders: 'Orders'
@@ -84,10 +85,22 @@ en:
   header:
     logout: Logout
   views:
+    service:
+      index: 'Items'
+      breadcrumb:
+        new: 'New service'
+      buttons:
+        create: 'Save service'
+      form:
+        title: 'New Service form'
     product:
       buttons:
-        create: 'save product'
+        add_to_cart: '+ add to cart'
+        create: 'Save product'
       form:
+        location: 'Location'
+        launch_date: 'Launch Date'
+        optional: 'optional'
         name: 'Name'
         title: 'New Product form'
         description: 'Description'
