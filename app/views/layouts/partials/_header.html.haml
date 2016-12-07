@@ -5,3 +5,8 @@
         %i.fa.fa-bars
     %ul.nav.navbar-top-links.navbar-right
       %li
+        - if user_signed_in?
+          = link_to trash_link, class: 'count-info' do
+            %i.fa.fa-trash.fa-2x
+            %span.label.label-primary
+              = trash_count
