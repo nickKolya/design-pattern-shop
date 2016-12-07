@@ -19,4 +19,7 @@ Rails.application.routes.draw do
   resources :products
 
   resources :services
+  resources :items
+
+  get 'receipt', to: 'receipts#generate_receipt'
 end
