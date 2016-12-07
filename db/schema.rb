@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161206211701) do
+ActiveRecord::Schema.define(version: 20161206222818) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "uuid-ossp"
 
-  create_table "categories", force: :cascade do |t|
+  create_table "categories", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -41,9 +41,10 @@ ActiveRecord::Schema.define(version: 20161206211701) do
   create_table "orders", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
     t.uuid     "user_id"
     t.string   "state"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.string   "name"
+    t.text     "description"
     t.index ["user_id"], name: "index_orders_on_user_id", using: :btree
   end
 
@@ -56,7 +57,7 @@ ActiveRecord::Schema.define(version: 20161206211701) do
     t.index ["order_id"], name: "index_orders_items_on_order_id", using: :btree
   end
 
-  create_table "sub_categories", force: :cascade do |t|
+  create_table "sub_categories", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
     t.integer  "category_id"
     t.string   "name"
     t.datetime "created_at",  null: false
