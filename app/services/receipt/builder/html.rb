@@ -16,9 +16,14 @@ module Receipt
       end
 
       def get_receipt
-        wrapper do
-          rheader + rbody + rfooter
-        end
+        File.open(file_path, 'w+') { |f| f.write(wrap_receipt) }
+        file_path
+      end
+
+      protected
+
+      def file_type
+        :html
       end
     end
   end

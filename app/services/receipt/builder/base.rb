@@ -27,8 +27,17 @@ module Receipt
         end
       end
 
+      def file_path
+        @file_path ||=
+          File.expand_path("#{Rails.root}/public/receipts/#{SecureRandom.hex(8)}.#{file_type}", __FILE__)
+      end
+
       def logo_path
         'logo.png'
+      end
+
+      def file_type
+        fail NotImplementedError
       end
 
       def receipt_view

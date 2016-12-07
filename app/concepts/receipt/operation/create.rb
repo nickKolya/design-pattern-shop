@@ -1,3 +1,5 @@
+require_relative File.expand_path('../../../main/operation/base_operation', __FILE__)
+
 module Receipt
   module Operation
     class Create < ::BaseOperation

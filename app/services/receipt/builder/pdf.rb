@@ -22,12 +22,11 @@ module Receipt
 
       protected
 
-      def file_path
-        File.expand_path("#{Rails.root}/public/#{SecureRandom.hex(8)}.pdf", __FILE__)
+      def file_type
+        :pdf
       end
 
       def logo_path
-        binding.pry
         "#{Rails.root}/app/assets/images/#{super}"
       end
     end

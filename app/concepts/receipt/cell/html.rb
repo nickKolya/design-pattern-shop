@@ -7,18 +7,13 @@ module Receipt
 
       DEFAULT_LOGO_PATH = 'logo.png'.freeze
 
-      def initialize(args = {})
-        binding.pry
-        @logo_path = args[:logo_path] || DEFAULT_LOGO_PATH
-      end
-
       def header
         content_tag(:header, style: 'text-align: center;') do
           (I18n.t('receipt.corporation') +
             tag(:br, nil) +
             I18n.t('receipt.address') +
             tag(:br) +
-            image_tag(logo_path, style: 'width: 50px;') +
+            content_tag(:img, nil, src: encoded_image, style: 'width: 50px;') +
             tag(:br) +
             billing_id +
             dashed_line).html_safe
@@ -44,6 +39,11 @@ module Receipt
       end
 
       private
+
+      def encoded_image
+        res = 'data:image/png;base64,'
+        res << Base64.encode64(open(::Rails.root + 'app/assets/images/logo.png') { |io| io.read })
+      end
 
       def dashed_line
         content_tag(:div, nil, style: line_dashed)
