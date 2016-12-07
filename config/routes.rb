@@ -21,5 +21,5 @@ Rails.application.routes.draw do
   resources :services
   resources :items
 
-  get 'receipt', to: 'receipts#generate_receipt'
+  get 'receipt(/:receipt_type)', to: 'receipts#generate_receipt', as: :receipt
 end

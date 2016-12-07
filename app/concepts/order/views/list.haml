@@ -22,3 +22,9 @@
     = link_to copy_order_path(model), class: 'btn btn-default' do
       %i.fa.fa-files-o
       = I18n.t('action.copy_info')
+    = link_to receipt_path(receipt_type: :pdf), class: 'btn btn-default' do
+      %i.fa.fa-download
+      = 'Get receipt(pdf)'
+    = link_to receipt_path(receipt_type: :html), class: 'btn btn-default' do
+      %i.fa.fa-download
+      = 'Get receipt(html)'
