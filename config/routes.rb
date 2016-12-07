@@ -3,4 +3,10 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :items
+  resources :orders, only: [] do
+    collection do
+      get :show_to_pay
+      post :pay
+    end
+  end
 end

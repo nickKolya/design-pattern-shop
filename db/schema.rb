@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161206211701) do
+ActiveRecord::Schema.define(version: 20161207005226) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,6 +48,15 @@ ActiveRecord::Schema.define(version: 20161206211701) do
     t.datetime "updated_at", null: false
     t.index ["item_id"], name: "index_orders_items_on_item_id", using: :btree
     t.index ["order_id"], name: "index_orders_items_on_order_id", using: :btree
+  end
+
+  create_table "payments", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
+    t.uuid     "order_id",                          null: false
+    t.integer  "status",     limit: 2, default: 0,  null: false
+    t.jsonb    "data",                 default: {}, null: false
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
+    t.index ["order_id"], name: "index_payments_on_order_id", using: :btree
   end
 
   create_table "users", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|

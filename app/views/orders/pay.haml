@@ -1,0 +1,2 @@
+%form{action: pay_orders_path, method: 'POST'}
+  %script.stripe-button{data: { amount: 100, description: 'Payment Confirmation', image: 'https://stripe.com/img/documentation/checkout/marketplace.png', key: Rails.configuration.stripe[:publishable_key], locale: 'auto', name: 'B&S', email: '123@gmail.com', bitcoin: true, currency: 'UAH'}, src: 'https://checkout.stripe.com/checkout.js'}

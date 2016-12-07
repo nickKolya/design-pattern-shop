@@ -12,6 +12,8 @@ gem 'trailblazer-rails'
 gem 'cells-haml'
 gem 'cells-rails'
 
+gem 'figaro'
+
 #=== UI =========================================
 gem 'sass-rails',                        '~> 5.0.3'
 gem 'turbolinks',                        '~> 5.0'
@@ -27,6 +29,9 @@ gem 'friendly_id',                       '~> 5.1'
 gem 'kaminari',                         '~> 0.17'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'paperclip',                         '~> 5.0'
+
+#=== PAYMENTS ====================================
+gem 'stripe'
 
 #=== TEMPLATE REQUIREMENTS ====================================
 gem 'bootstrap-sass', '~> 3.3.6'
