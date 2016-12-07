@@ -23,7 +23,10 @@ class Order
       end
 
       def items_select
-        options_from_collection_for_select(Item.all, :id, :name, selected_items)
+        labels_collection = contract.model.items.collect do |label|
+          [label.name, label.id]
+        end.compact.sort
+        options_for_select(labels_collection, selected_items)
       end
 
       def params?

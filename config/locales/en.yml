@@ -35,7 +35,6 @@ en:
     update: Update
   hello: "Hello world"
   welcome_headline: Welcome to Fluor
-  company_name: Fluor
   operation:
     items:
       messages:
@@ -43,20 +42,6 @@ en:
     orders:
       messages:
         destroyed: 'Order was destroyed'
-  views:
-    order:
-      state: State
-      delete: Delete
-      listing_order: My Orders
-      new_order: 'New Order'
-      name: Name
-      created_at: Created At
-      description: Description
-      items: Products and Services
-      choose_products_or_services: Choose Products or Services
-    product:
-      new_product: 'New Product'
-        created: 'Item was created'
   leftsidebar:
     products: 'Products'
     orders: 'Orders'
@@ -72,6 +57,7 @@ en:
     updated: "%{model} was successfully updated."
     deleted: "%{model} was successfully deleted."
     canceled: '%{model} was successfully canceled'
+    added: '%{model} was successfully added'
   error_messages:
     record_not_found: Record not found
     action_not_found: The action could not be found
@@ -82,6 +68,7 @@ en:
   activerecord:
     models:
       order: Order
+      item: Item
   header:
     logout: Logout
   views:
@@ -111,3 +98,13 @@ en:
         new: 'New product'
       new_service: 'Create Service'
       new_product: 'Create Product'
+    order:
+      state: State
+      delete: Delete
+      listing_order: My Orders
+      new_order: 'New Order'
+      name: Name
+      created_at: Created At
+      description: Description
+      items: Products and Services
+      choose_products_or_services: Choose Products or Services

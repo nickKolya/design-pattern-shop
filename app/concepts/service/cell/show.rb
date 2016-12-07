@@ -6,6 +6,8 @@ class Service
       delegate :price, :category_name, :name, :image, :description,
                :launch_date, :location, to: :model
 
+      delegate :item_add_to_order_path, to: '::Rails.application.routes.url_helpers'
+
       def show
         render :show
       end

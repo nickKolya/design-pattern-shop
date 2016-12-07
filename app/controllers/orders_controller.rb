@@ -70,6 +70,12 @@ class OrdersController < ApplicationController
     redirect_to orders_path, notice: t('successfull_messages.created', model: t('activerecord.models.order'))
   end
 
+  def add_to_order
+    process_params!(params)
+    run Order::AddProduct
+    redirect_to items_path, notice: t('successfull_messages.added', model: t('activerecord.models.item'))
+  end
+
   private
 
   def render_form
