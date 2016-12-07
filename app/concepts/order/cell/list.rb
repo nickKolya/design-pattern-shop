@@ -15,6 +15,10 @@ class Order
           'Invoiced Order'
         end
       end
+
+      def to_date(field)
+        field.strftime('%b %d, %Y - %I:%M %P') if field.present?
+      end
     end
   end
 end

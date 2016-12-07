@@ -5,8 +5,8 @@
         %i.fa.fa-bars
     %ul.nav.navbar-top-links.navbar-right
       %li
-        - if current_user.present?
-          = link_to orders_path, class: 'count-info' do
+        - if user_signed_in?
+          = link_to trash_link, class: 'count-info' do
             %i.fa.fa-trash.fa-2x
             %span.label.label-primary
-              = current_user.orders.newmade.take&.items&.count.to_i
+              = trash_count

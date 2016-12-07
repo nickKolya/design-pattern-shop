@@ -1,8 +1,8 @@
 %tr
   %td= link_to name, edit_order_path(model)
   %td= to_state
-  %td= created_at
-  %td.width-40
+  %td= to_date created_at
+  %td.width-50
     = form_tag order_path(model), method: :delete, 'data-index': model.id, class: 'swal-form-js display-none' do
       .clearfix
     %i.fa.fa-trash.swal.btn.btn-danger{ 'data-index': model.id, 'data-placement': 'left', 'data-toggle': 'delete-subscription-tooltip', title: I18n.t('action.destroy') }
@@ -16,3 +16,9 @@
     = link_to invoice_order_path(model), class: 'btn btn-primary' do
       %i.fa.fa-cc-stripe
       = I18n.t('action.invoice')
+    = link_to clone_order_path(model), class: 'btn btn-default' do
+      %i.fa.fa-clone
+      = I18n.t('action.clone')
+    = link_to copy_order_path(model), class: 'btn btn-default' do
+      %i.fa.fa-files-o
+      = I18n.t('action.copy_info')

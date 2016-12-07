@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   rescue_from ActiveRecord::RecordNotFound do
-    redirect_to root_url, alert: t('error_messages.record_not_found')
+    redirect_to root_path, alert: t('error_messages.record_not_found')
   end
 
   private
@@ -29,6 +29,6 @@ class ApplicationController < ActionController::Base
   end
 
   def should_authenticate
-    redirect_to root_url, alert: t('devise_views.signin.header') unless current_user.present?
+    redirect_to root_path, alert: t('devise_views.signin.header') unless user_signed_in?
   end
 end

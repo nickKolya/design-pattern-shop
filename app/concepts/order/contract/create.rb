@@ -6,7 +6,13 @@ class Order
       validate :current_state
 
       def current_state
-        errors.add(:order, 'You can`n create new order') if model.user.orders.newmade.count >= 1
+        errors.add(:order, 'You can`n create new order') if newmade?
+      end
+
+      private
+
+      def newmade?
+        model.user.orders.newmade.count >= 1
       end
     end
   end

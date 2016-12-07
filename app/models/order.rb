@@ -16,4 +16,12 @@ class Order < ApplicationRecord
       state_string_as_class == "OrderStates::#{type}".classify.constantize
     end
   end
+
+  alias orig_dup dup
+
+  def dup_with_relations
+    copy = orig_dup
+    copy.items = items
+    copy
+  end
 end

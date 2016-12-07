@@ -28,6 +28,8 @@ en:
     cancel: Cancel
     invoice: Invoice
     reopen: Reopen
+    clone: Clone
+    copy_info: Copy info
   buttons:
     create: Create
     update: Update

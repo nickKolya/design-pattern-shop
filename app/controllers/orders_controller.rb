@@ -1,5 +1,6 @@
 class OrdersController < ApplicationController
   before_action :should_authenticate
+  before_action :set_order, only: [:clone, :copy]
 
   def index
     collection Order::Index
@@ -59,9 +60,23 @@ class OrdersController < ApplicationController
     redirect_to orders_path, alert: @operation.errors.full_messages
   end
 
+  def clone
+    OrderPrototype::DupPrototype.new(@order).clone
+    redirect_to orders_path, notice: t('successfull_messages.created', model: t('activerecord.models.order'))
+  end
+
+  def copy
+    OrderPrototype::InformationPrototype.new(@order).clone
+    redirect_to orders_path, notice: t('successfull_messages.created', model: t('activerecord.models.order'))
+  end
+
   private
 
   def render_form
     render text: concept('order/cell/form', @operation), layout: true
+  end
+
+  def set_order
+    @order ||= current_user.orders.find(params[:id])
   end
 end
