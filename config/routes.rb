@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   root to: 'home#index'
   devise_for :users
 
-  resources :items
+  resources :items do
+    get 'add_to_order', to: 'orders#add_to_order', as: 'add_to_order'
+  end
 
   resources :orders, except: [:show] do
     member do

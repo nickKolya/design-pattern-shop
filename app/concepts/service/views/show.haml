@@ -11,5 +11,5 @@
         %span.product-name= name
         .small.m-t-xs= description
         .m-t.text-righ
-          = link_to I18n.t('views.product.buttons.add_to_cart'), '#',
+          = link_to I18n.t('views.product.buttons.add_to_cart'), item_add_to_order_path(item_id: model.id),
                     class: 'btn btn-xs btn-outline btn-primary'
